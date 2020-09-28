@@ -48,18 +48,18 @@
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <% @widgets.each do |widget| %>
-              <tr>
+              <tr data-controller="toggle" data-toggle-class="invisible">
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-                  <%= link_to widget.name, widget_path(widget) %>
+                  <span data-target="toggle.toggalable"><%= link_to widget.name, widget_path(widget) %></span>
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                  <%= widget.quantity %>
+                  <span data-target="toggle.toggalable"><%= widget.quantity %></span>
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                  <%= widget.available %>
+                  <span data-target="toggle.toggalable"><%= widget.available %></span>
                 </td>
-                <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-                  <%= link_to 'Edit', edit_widget_path(widget) %>
+                <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium w-1/5">
+                  <%= link_to 'Hide', '#',  data: { action: "toggle#class toggle#text", 'toggle-text': 'Hide', 'toggle-text-alt': 'Show' } %>
                 </td>
               </tr>
             <% end %>
