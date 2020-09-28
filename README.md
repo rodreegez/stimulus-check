@@ -1,24 +1,6 @@
-# README
+# Stimulus Check
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A repo for checking how things work in Rails using StimulusJS
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Checks
+* Toggle - toggle visibility of classes and innerHTML text
